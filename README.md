@@ -14,7 +14,7 @@ Accounts are created in **on‑prem Active Directory**, mailboxes enabled in **E
 
 ## Prerequisites
 - Sage HR system configured as the source of employee lifecycle events (Joiner, Mover, Leaver)
-- Jira Service Management project integrated with Sage HR for HR → IT approvals
+- Jira Service Management project integrated with Sage HR for HR → IT approvals. Jira SCIM for leavers
 - Azure subscription with Automation Account and Hybrid Worker
 - Entra ID tenant with Graph API permissions
 - Exchange hybrid setup with PowerShell remoting enabled
