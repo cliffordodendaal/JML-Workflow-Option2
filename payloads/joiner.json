@@ -1,1 +1,34 @@
+{
+  "eventType": "Joiner",
+  "timestamp": "2026-07-18T06:52:00Z",
+  "employee": {
+    "employeeId": "12345",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "email": "jane.doe@example.com",
+    "jobTitle": "Software Engineer",
+    "department": "IT",
+    "managerId": "67890",
+    "costCenter": "IT-001",
+    "location": "Florida, Gauteng"
+  },
+  "workflow": {
+    "jiraTicketId": "JML-2026-001",
+    "approvalStatus": "Approved",
+    "triggerSource": "SageHR",
+    "runbook": "Joiner.ps1"
+  },
+  "provisioning": {
+    "createADAccount": true,
+    "enableExchangeMailbox": true,
+    "assignLicenses": ["M365-E3"],
+    "addGroups": ["IT-Staff", "Developers"],
+    "setManager": true
+  },
+  "audit": {
+    "initiatedBy": "HR System",
+    "approvalBy": "Manager",
+    "logReference": "Sentinel-Log-2026-07-18-001"
+  }
+}
 
