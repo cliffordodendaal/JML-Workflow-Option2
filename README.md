@@ -1,7 +1,7 @@
 # JML-Workflow-Option2
 
 ## Scenario
-This lab demonstrates a **Joiner–Mover–Leaver (JML) workflow** using **Sage HR** as the source system, **Jira Service Management** for approvals, and **Azure Automation Runbooks** for orchestration.  
+**Joiner–Mover–Leaver (JML) workflow** using **Sage HR** as the source system, **Jira Service Management** for approvals, and **Azure Automation Runbooks** for orchestration.  
 Accounts are created in **on‑prem Active Directory**, mailboxes enabled in **Exchange hybrid**, synced into **Entra ID**, and cloud tasks completed via **Graph API**.  
 **Azure Sentinel** overlays provide compliance monitoring and anomaly detection.
 
