@@ -22,13 +22,25 @@ Accounts are created in **on‑prem Active Directory**, mailboxes enabled in **E
 - Sentinel workspace for monitoring and anomaly detection
 
 ## Architecture
-See the `/Architecture` folder for six artifacts:
-- Business Requirements Document (BRD)
-- Workflow diagram
-- Compliance matrix
-- FinOps/TBM notes
-- Governance narrative
-- Risk table
+                    Sage HR  
+                        │  
+                        ▼  
+    Jira Approval (HTTP POST with JSON payload)  
+                        │  
+                        ▼  
+            Azure Automation Runbook  
+                        │  
+                        ├── **JOINER** → Create AD User → Enable Mailbox → Sync to Entra → Assign License → Add to Groups → Set Manager  
+                        │  
+                        ├── **MOVER** → Update Attributes → Remove Old Groups → Add New Groups → Update App Access  
+                        │  
+                        └── **LEAVER** → Disable AD Account → Revoke Sessions → Remove Licenses → Remove Groups → Retain per policy  
+                        │  
+                        ▼  
+      Microsoft Graph API → Microsoft Entra ID  
+                        │  
+                        ▼  
+         Audit Log + Sentinel Monitoring
 
 ## Runbooks
 Located in `/runbooks`:
