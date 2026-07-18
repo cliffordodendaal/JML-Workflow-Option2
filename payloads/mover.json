@@ -1,1 +1,42 @@
+{
+  "eventType": "Mover",
+  "timestamp": "2026-07-18T06:57:00Z",
+  "employee": {
+    "employeeId": "24680",
+    "firstName": "Alice",
+    "lastName": "Ngwenya",
+    "email": "alice.ngwenya@example.com",
+    "jobTitle": "Senior Project Manager",
+    "department": "Operations",
+    "managerId": "13579",
+    "costCenter": "OPS-003",
+    "location": "Florida, Gauteng"
+  },
+  "workflow": {
+    "jiraTicketId": "JML-2026-015",
+    "approvalStatus": "Approved",
+    "triggerSource": "SageHR",
+    "runbook": "Mover.ps1"
+  },
+  "modifications": {
+    "updateAttributes": {
+      "jobTitle": "Senior Project Manager",
+      "department": "Operations"
+    },
+    "modifyGroups": {
+      "remove": ["Project-Staff"],
+      "add": ["Ops-Leads", "PMO"]
+    },
+    "updateLicenses": {
+      "remove": ["M365-E3"],
+      "add": ["M365-E5"]
+    },
+    "updateManager": true
+  },
+  "audit": {
+    "initiatedBy": "HR System",
+    "approvalBy": "Manager",
+    "logReference": "Sentinel-Log-2026-07-18-015"
+  }
+}
 
