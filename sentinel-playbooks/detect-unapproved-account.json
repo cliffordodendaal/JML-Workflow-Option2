@@ -1,1 +1,35 @@
+{
+  "eventType": "Detection",
+  "timestamp": "2026-07-18T07:00:00Z",
+  "alert": {
+    "alertId": "Sentinel-Detect-2026-021",
+    "alertName": "Unapproved Account Creation",
+    "severity": "High",
+    "status": "Active"
+  },
+  "account": {
+    "userPrincipalName": "unauthorized.user@example.com",
+    "displayName": "Unauthorized User",
+    "createdBy": "Unknown",
+    "creationSource": "Manual AD Entry",
+    "department": "Unknown",
+    "costCenter": "Unmapped"
+  },
+  "workflow": {
+    "expectedSource": "SageHR → Jira → Orchestrator.ps1",
+    "detectedSource": "Direct AD",
+    "complianceViolation": true
+  },
+  "actions": {
+    "disableAccount": true,
+    "notifySecurityTeam": true,
+    "createJiraTicket": "SEC-2026-045",
+    "triggerPlaybook": "Disable-Unapproved-Account"
+  },
+  "audit": {
+    "initiatedBy": "Sentinel Rule",
+    "correlationId": "JML-Detect-2026-021",
+    "logReference": "Sentinel-Log-2026-07-18-021"
+  }
+}
 
