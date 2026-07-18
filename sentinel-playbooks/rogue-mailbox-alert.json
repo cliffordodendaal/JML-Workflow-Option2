@@ -1,1 +1,35 @@
+{
+  "eventType": "Detection",
+  "timestamp": "2026-07-18T07:02:00Z",
+  "alert": {
+    "alertId": "Sentinel-Detect-2026-030",
+    "alertName": "Rogue Mailbox Creation",
+    "severity": "Critical",
+    "status": "Active"
+  },
+  "mailbox": {
+    "userPrincipalName": "rogue.mailbox@example.com",
+    "displayName": "Rogue Mailbox",
+    "createdBy": "Unknown",
+    "creationSource": "Manual Exchange Online",
+    "department": "Unassigned",
+    "costCenter": "Unmapped"
+  },
+  "workflow": {
+    "expectedSource": "SageHR → Jira → Orchestrator.ps1 → Joiner.ps1",
+    "detectedSource": "Direct Exchange Online",
+    "complianceViolation": true
+  },
+  "actions": {
+    "disableMailbox": true,
+    "notifySecurityTeam": true,
+    "createJiraTicket": "SEC-2026-052",
+    "triggerPlaybook": "Disable-Rogue-Mailbox"
+  },
+  "audit": {
+    "initiatedBy": "Sentinel Rule",
+    "correlationId": "JML-Detect-2026-030",
+    "logReference": "Sentinel-Log-2026-07-18-030"
+  }
+}
 
