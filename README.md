@@ -30,7 +30,7 @@ Accounts are created in **on‑prem Active Directory**, mailboxes enabled in **E
                         ▼  
             Azure Automation Runbook  
                         │  
-                        ├── **JOINER** → Create AD User → Enable Mailbox → Sync to Entra → Assign License → Add to Groups → Set Manager  
+                        ├── **JOINER** → Call Hybrid Connector → Create AD User → Enable Mailbox → Sync to Entra → Assign License → Add to Groups → Set Manager  
                         │  
                         ├── **MOVER** → Update Attributes → Remove Old Groups → Add New Groups → Update App Access  
                         │  
